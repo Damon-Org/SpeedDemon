@@ -1,0 +1,3 @@
+[submodule "vendor/sleepy-discord"]
+	path = vendor/sleepy-discord
+	url = git@github.com:yourWaifu/sleepy-discord.git
