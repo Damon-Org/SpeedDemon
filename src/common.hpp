@@ -1,4 +1,10 @@
 #pragma once
-#include "sleepy_discord/sleepy_discord.h"
+#include <nlohmann/json.hpp>
+#include <sleepy_discord/sleepy_discord.h>
 
-using namespace SleepyDiscord;
+namespace speed_demon
+{
+    using namespace SleepyDiscord;
+
+    inline nlohmann::json config;
+}
