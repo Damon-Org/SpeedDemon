@@ -1,12 +1,16 @@
 #include "bot.hpp"
+#include "logger.hpp"
 
-void DiscordBot::onMessage(Message message)
+namespace speed_demon
 {
-    if (message.content == "hello")
-        this->sendMessage(message.channelID, "Bonjour");
-}
+    void discord_bot::onMessage(Message message)
+    {
+        if (message.content == "hello")
+            this->sendMessage(message.channelID, "Bonjour");
+    }
 
-void DiscordBot::onReady(Ready state)
-{
-    std::cout << state.user.username << " is ready for your service!" << std::endl;
+    void discord_bot::onReady(Ready state)
+    {
+        logger::verbose("BOT", "Bot is ready to serve.");
+    }
 }

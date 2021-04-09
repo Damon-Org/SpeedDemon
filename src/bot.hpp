@@ -1,12 +1,15 @@
 #pragma once
 #include "common.hpp"
 
-class DiscordBot : public DiscordClient
+namespace speed_demon
 {
-    public:
-        using DiscordClient::DiscordClient;
+    class discord_bot : public DiscordClient
+    {
+        public:
+            using DiscordClient::DiscordClient;
 
-        void onMessage(Message message) override;
-        void onReady(Ready state) override;
-    private:
-};
+            void onMessage(Message message) override;
+            void onReady(Ready state) override;
+        private:
+    };
+}
