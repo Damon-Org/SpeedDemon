@@ -8,8 +8,10 @@ file(GLOB_RECURSE SOURCE_HEADERS src/**.hpp)
 
 add_executable(${PROJECT_NAME} ${SOURCE_FILES} ${SOURCE_HEADERS})
 
+add_subdirectory(vendor/json)
 add_subdirectory(vendor/sleepy-discord)
-target_link_libraries(${PROJECT_NAME} sleepy-discord)
+
+target_link_libraries(${PROJECT_NAME} PRIVATE nlohmann_json::nlohmann_json sleepy-discord)
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
