@@ -1,6 +1,6 @@
 [submodule "vendor/sleepy-discord"]
-	path = vendor/sleepy-discord
-	url = git@github.com:yourWaifu/sleepy-discord.git
+    path = vendor/sleepy-discord
+    url = https://github.com/yourWaifu/sleepy-discord.git
 [submodule "vendor/json"]
-	path = vendor/json
-	url = git@github.com:nlohmann/json.git
+    path = vendor/json
+    url = https://github.com/nlohmann/json.git
